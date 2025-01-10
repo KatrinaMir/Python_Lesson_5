@@ -51,8 +51,7 @@ def main():
         del skill[0]
 
     folder = 'Dv5'
-    if not os.path.exists(folder):
-        os.makedirs(folder)
+    os.makedirs(folder, mode=0o777, exist_ok=False)
 
     for number in range(10):
             random_skill = random.sample(runic_skills, 3)
